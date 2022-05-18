@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Requiblack meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        body{
+            margin: auto;
+            border: 0;
+            background: url('np.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        header{
+            padding: 12px;
+            background: #04AA6D;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+        }
+        header div{
+            color: white;
+            padding: 0 12px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 auto;
+        }
+        form{
+            background: white;
+            border-radius: 30px;
+        }
+        #gs{
+            color: black;
+            font-weight: 700;
+            font-size: 2rem;
+            padding-bottom: 1rem;
+        }
+        .marg{
+            margin-top: 1em;
+        }
+        form i {
+            margin-left: 0px;
+            cursor: pointer;
+        }
+        #spacer{
+            flex-grow: 1;
+            height: 20px;
+        }
+        @media only screen and (min-width: 600px) {
+            .topnav{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 599px) {
+            header{
+                display: none;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+            }
+
+            .topnav #myLinks {
+                display: none;
+            }
+
+            .topnav a {
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                display: block;
+            }
+
+            .topnav a.icon {
+                background: black;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .active {
+                background-color: #04AA6D;
+                color: white;
+            }
+            header div{
+                display: none;
+            }
+        }
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body class="bg-image">
+    <header>
+        <img src="nifo.png" width="90px" height="40px" alt="">
+        <nav id="spacer"></nav>
+        <a href=""><div id="home">Home</div></a>
+        <a href=""><div id="cu">Contact Us</div></a>
+        <a href=""><div id="si">Sign In</div></a>
+        <a href=""><div id="su">Sign Up</div></a>
+    </header>
+    <div class="topnav">
+        <a href="#home" class="active"><img src="nifo.png" width="90px" alt=""></a>
+        <div id="myLinks">
+          <a href="#news">Home</a>
+          <a href="#news">Contact Us</a>
+          <a href="#contact">Sign In</a>
+          <a href="#about">Sign Up</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="row d-flex justify-content-center">
+
+        <form class="col-xs-9 col-sm-9 col-md-6 mt-5 p-5 mb-5" style="background: white;">
+            <div id="gs">
+                Get Started By Signing Up
+            </div>
+      
+            <div class="form-row row">
+                <div class="form-group col-md-6 marg">
+                  <label for="txt">Username</label>
+                  <input type="text" class="form-control" id="txt" placeholder="Username">
+                </div>
+                <div class="form-group col-md-6 marg">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="Email" placeholder="Email">
+                </div>
+                <div class="form-group col-md-12 marg">
+                    <label for="tele">Phone Number</label>
+                    <input type="tel" class="form-control" id="tele" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-6 marg">
+                    <i class="bi bi-eye-slash form-group col-md-1 marg" id="togglePassword1"></i>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group col-md-5 marg">
+                    <i class="bi bi-eye-slash form-group col-md-1 marg" id="togglePassword2"></i>
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" class="form-control" id="cpassword" placeholder="Password"/>
+                </div>
+            </div>
+                <select class="form-group marg" name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+        
+            <div class="row marg">
+            <button type="submit" id="button" class="btn btn-primary">Sign Up</button></div>
+      
+        </form>
+      
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="shi-w-2.js"></script>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+    </body>
+</html>
